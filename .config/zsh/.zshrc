@@ -10,9 +10,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-alias ls='ls --color=auto'
-
+# Generate with `antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh`
 source $ZDOTDIR/.zsh_plugins.sh
 
+# Aliases
+alias ls='ls --color=auto'
+
+# Bindings
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
