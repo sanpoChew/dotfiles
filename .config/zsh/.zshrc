@@ -11,3 +11,8 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls --color=auto'
+
+source $ZDOTDIR/.zsh_plugins.sh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
