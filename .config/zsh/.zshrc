@@ -10,7 +10,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Generate with `antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh`
+# Generate with `antibody bundle < $ZDOTDIR/.zsh_plugins.txt > $ZDOTDIR/.zsh_plugins.sh`
 source $ZDOTDIR/.zsh_plugins.sh
 
 # Aliases
