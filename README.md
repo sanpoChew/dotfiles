@@ -13,4 +13,6 @@ git pull origin master
 
 2. generate antibody plugin bundle:
 
- `antibody bundle < $ZDOTDIR/.zsh_plugins.txt > $ZDOTDIR/.zsh_plugins.sh`
+ ```
+ antibody bundle < $ZDOTDIR/.zsh_plugins.txt > $ZDOTDIR/.zsh_plugins.sh
+ ```
