@@ -1,2 +1,16 @@
 directory: /srv/music/library
-library: /srv/music/library.db
+library: /srv/music/library.blb
+plugins: discogs edit fetchart embedart ftintitle convert
+paths:
+    default: $albumartist/$year - $albumartist - $album [%if{$catalognum,$catalognum - }%if{$label,$label - }$media]/$track - $artist - $title
+    comp: $albumartist/$year - $albumartist - $album [%if{$catalognum,$catalognum - }%if{$label,$label - }$media]/$track - $artist - $title
+convert:
+    auto: true
+    never_convert_lossy_files: true
+    format: aiff
+    formats:
+        aiff:
+            command: sox $source $dest
+            extension: aiff
+edit:
+    itemfields: track tracktotal title artist album albumartist label catalognum year genre media
