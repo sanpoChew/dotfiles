@@ -7,6 +7,7 @@ paths:
 convert:
     auto: true
     never_convert_lossy_files: true
+    no_convert: path::\.(aiff)$ 
     format: aiff
     formats:
         aiff:
