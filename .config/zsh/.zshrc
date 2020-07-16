@@ -14,7 +14,7 @@ compinit
 source $ZDOTDIR/.zsh_plugins.sh
 
 # Aliases
-alias ls='ls --color=auto'
+ls --color=auto > /dev/null 2>&1 && alias ls='ls --color=auto' || alias ls='ls -G'
 
 # Bindings
 bindkey '^[[A' history-substring-search-up
