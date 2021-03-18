@@ -1,7 +1,10 @@
-directory: /srv/music/library
-library: /srv/music/library.blb
-plugins: discogs edit fetchart embedart ftintitle convert inline
+directory: ~/Music/library
+library: ~/Music/library.blb
+plugins: discogs edit fetchart embedart ftintitle convert inline bandcamp
 per_disc_numbering: yes
+import:
+    timid: yes
+    move: yes
 paths:
     default: $albumartist/$year - $albumartist - $album [%if{$catalognum,$catalognum - }%if{$label,$label - }$media]/%if{$multidisc,$disc-}$track - $artist - $title
     comp: $albumartist/$year - $albumartist - $album [%if{$catalognum,$catalognum - }%if{$label,$label - }$media]/$track - $artist - $title
@@ -18,3 +21,8 @@ edit:
     itemfields: track tracktotal title artist album albumartist label catalognum year genre media
 item_fields:
     multidisc: 1 if disctotal > 1 else 0
+bandcamp:
+    art: true
+    exclude_extra_fields:
+      - lyrics
+      - comments
