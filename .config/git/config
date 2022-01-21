@@ -1,0 +1,7 @@
+[user]
+	name = Joseph Bushell
+	email = josephbushell@pm.me
+[core]
+	editor = nano
+[pull]
+	rebase = false
