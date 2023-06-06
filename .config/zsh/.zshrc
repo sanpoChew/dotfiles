@@ -10,8 +10,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Generate with `antibody bundle < $ZDOTDIR/.zsh_plugins.txt > $ZDOTDIR/.zsh_plugins.sh`
-source $ZDOTDIR/.zsh_plugins.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
 
 # Aliases
 ls --color=auto > /dev/null 2>&1 && alias ls='ls --color=auto' || alias ls='ls -G'
