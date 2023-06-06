@@ -5,6 +5,6 @@
 ```
 git init .
 git remote add origin <repostory_url>
-git pull origin master
+git pull origin main
 ```
 > You can't simply do `git clone <repository_url> .` as your home directory won't be empty.
