@@ -11,6 +11,7 @@ compinit
 # End of lines added by compinstall
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(direnv hook zsh)"
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
