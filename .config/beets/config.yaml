@@ -1,24 +1,22 @@
-directory: ~/Music/library
-library: ~/Music/library.blb
+directory: /Volumes/music/Library
+library: /Volumes/music/Library.blb
 plugins: discogs edit fetchart embedart ftintitle convert inline bandcamp
 per_disc_numbering: yes
 import:
     timid: yes
-    move: yes
 paths:
     default: $albumartist/$year - $albumartist - $album [%if{$catalognum,$catalognum - }%if{$label,$label - }$media]/%if{$multidisc,$disc-}$track - $artist - $title
     comp: $albumartist/$year - $albumartist - $album [%if{$catalognum,$catalognum - }%if{$label,$label - }$media]/$track - $artist - $title
+    album:Sets & Mixes: $albumartist/Sets & Mixes/%if{$year,$year - }$artist - $title
 convert:
     auto: true
     never_convert_lossy_files: true
-    no_convert: path::\.(aiff)$ 
-    format: aiff
+    no_convert: format:alac 
+    format: alac
     formats:
-        aiff:
-            command: sox $source $dest
-            extension: aiff
+      aiff: ffmpeg -i $source -write_id3v2 1 -c:v copy $dest
 edit:
-    itemfields: track tracktotal title artist album albumartist label catalognum year genre media
+    itemfields: track tracktotal title artist album albumartist label catalognum year genre media month day
 item_fields:
     multidisc: 1 if disctotal > 1 else 0
 bandcamp:
@@ -26,3 +24,5 @@ bandcamp:
     exclude_extra_fields:
       - lyrics
       - comments
+ftintitle:
+    format: (feat. {0})
