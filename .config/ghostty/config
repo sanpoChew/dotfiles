@@ -1,1 +1,2 @@
 keybind = global:§=toggle_quick_terminal
+background-opacity = 0.3
