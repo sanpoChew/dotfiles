@@ -22,3 +22,5 @@ ls --color=auto > /dev/null 2>&1 && alias ls='ls --color=auto' || alias ls='ls -
 # Bindings
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+eval "$(starship init zsh)"
