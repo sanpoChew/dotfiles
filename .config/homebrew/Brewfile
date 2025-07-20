@@ -1,3 +1,2 @@
 brew "direnv"
 brew "antidote"
-cask "visual-studio-code"
