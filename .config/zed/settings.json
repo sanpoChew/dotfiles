@@ -10,10 +10,7 @@
   "theme": "Gruvbox Dark",
   "buffer_font_size": 12,
   "terminal": {
-    "font_family": "FiraCode Nerd Font Mono",
-    "shell": {
-      "program": "zsh"
-    }
+    "font_family": "FiraCode Nerd Font Mono"
   }
   // "format_on_save": "off"
 }
