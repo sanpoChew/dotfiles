@@ -1,4 +1,4 @@
 brew "direnv"
 brew "antidote"
 brew "starship"
-brew "font-fira-code-nerd-font"
+cask "font-fira-code-nerd-font"
